@@ -5,7 +5,7 @@ date: 2013-09-17 11:21
 comments: true
 categories: FullStack
 ---
-{% codeblock Time to be Awesome - awesome.rb %}
+{% codeblock I am a secret n00b- sn00b.rb %}
 puts "Hello World!" if sn00b
 {% endcodeblock %}
 
