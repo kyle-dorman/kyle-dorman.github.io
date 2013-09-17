@@ -4,7 +4,7 @@
   <title><![CDATA[Category: FullStack | a blog]]></title>
   <link href="http://kyle-dorman.github.io/blog/categories/fullstack/atom.xml" rel="self"/>
   <link href="http://kyle-dorman.github.io/"/>
-  <updated>2013-09-17T11:49:29-04:00</updated>
+  <updated>2013-09-17T12:16:41-04:00</updated>
   <id>http://kyle-dorman.github.io/</id>
   <author>
     <name><![CDATA[Kyle Dorman]]></name>
@@ -27,7 +27,14 @@
 
 <blockquote><p>&ldquo;Very Interesting&rdquo; &ndash; Kyle Dorman</p></blockquote>
 
-<p>And now I am typing more things. Maybe I will write a real blog post later. This is fun because I get to use git to post it and wrtie it in sublime text 2 &copy;.</p>
+<p>And now I am typing more things. Maybe I will write a real blog post later.</p>
+
+<!-- more -->
+
+
+<p>This is fun because I get to use git to post it and wrtie it in sublime text 2 &copy;.</p>
+
+<p><a href="https://www.youtube.com/watch?v=CSmfX6cKoIc"><img src="HTTP://img.youtube.com/vi/CSmfX6cKoIc/0.jpg" alt="TEXXXXT" /></a></p>
 
 <p>Cheers,
 Kyle</p>
