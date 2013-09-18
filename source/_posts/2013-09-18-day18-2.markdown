@@ -9,22 +9,28 @@ categories:
 [A link for links sake](http://kyle-dorman.github.io/)
 
 {% codeblock breakfast of champions- bagel.rb %}
-puts "chive is the best creamcheese" unless lox"
+puts "chive is the best cream cheese" unless lox
 {% endcodeblock %}
 
-Day 18 baby!. Biggest day of the class! "But Kyle, its only day 3 of the class. How can today be both day 18 and 'the biggest day of the class?" Well rude imaginary person, I started doing prep-wrk for this class on September 1, so thats how its day 18, silly. AND everyday is the biggest day of the class. Leggo.
+Day 18 baby! Biggest day of the class! "But Kyle, its only day 3 of the class. How can today be both day 18 and 'the biggest day of the class?" Well rude imaginary person, I started doing prep-wrk for this class on September 1, so thats how its day 18, silly. AND everyday is the biggest day of the class. Leggo.
 
 Recap: Yesterday we bulit a blog. This blog. Blogs were origonally called weblogs. Some fancy person came along and decided to drop the "we" and now weblogs are called blogs. I might be a weblog guy myself. Not sure yet, but I'll get back to you when I know. This blog is cool because it is very customizable and everything in it uses code. To post stuff I have to send a git push request. To update visuals, I can update the html and css code. Fun stuff. Great for learning and for webloging. After we built a blog everyone int he class worked on ruby. I went through the [Test First dot org](http://testfirst.org/learn_ruby) tutorial up through number 11 I think. I will do a few more this morning. I then built a haiku maker. We were given a file which had all the words in the dictionary and how to sound the words out which indicated how many sylabls(spelling) the word had. For this, I could randomly generate numbers which when paired together would give a haiku. Here is an example:
-SHAFTED WILLISON
-PECH COLORISTIC TEACHING
-ACCOMPANYING
+
+>SHAFTED WILLISON
+
+>PECH COLORISTIC TEACHING
+
+>ACCOMPANYING
 
 or this one:
-SIDLER HEAVEN'S
-PROPPED WATNE COIN UNGAR THIEDE FUNES
-TESTICLES BEGINS
 
-Future: Today I will write a script with will find all the haikus in a book. And also finish the Test first stuff.
+>SIDLER HEAVEN'S
+
+>PROPPED WATNE COIN UNGAR THIEDE FUNES
+
+>TESTICLES BEGINS
+
+Future: Today I will write a script with will find all the haikus in a book. And also finish the _Test First_ stuff.
 
 Thats all for now. Send me a youtube video and I'll try to post it.
 
