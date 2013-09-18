@@ -9,7 +9,7 @@ categories:
 [A link for links sake](http://kyle-dorman.github.io/)
 
 {% codeblock breakfast of champions- bagel.rb %}
-puts "chive is the best creamcheese unless lox"
+puts "chive is the best creamcheese" unless lox"
 {% endcodeblock %}
 
 Day 18 baby!. Biggest day of the class! "But Kyle, its only day 3 of the class. How can today be both day 18 and 'the biggest day of the class?" Well rude imaginary person, I started doing prep-wrk for this class on September 1, so thats how its day 18, silly. AND everyday is the biggest day of the class. Leggo.
