@@ -47,7 +47,7 @@ blog_content = Feedzirra::Feed.parse(File.open(atom_path).read)
 
 entries_array = []
 blog_content.entries.each do |entry|
-  if entry.published > 7.days.ago
+  if entry.published > 1.days.ago
     entries_array << entry
   end
 end
@@ -66,25 +66,25 @@ csv_file.each do |row|
   name = first_name + " " + last_name
   email = row[:email_address]
   num_months_since_contact = row[:months_since_contact]
-  friend_number = row[:phone_number]
-  text_message = "Hi #{name} this is #{from_name}. Today is #{Time.now}!"
+  #friend_number = row[:phone_number]
+  #text_message = "Hi #{name} this is #{from_name}. Today is #{Time.now}!"
   puts name
-  api_call_hash  = {
-    :action => 'create',
-    :token => '254c4b1c7d312142a0c2804e09308aefd690d1b80077812754eef51bf3162e11b4cc6e1d8471a55f6f7e94cf',
-    :number => friend_number,
-    :message => text_message
-}
+  # api_call_hash  = {
+  #   :action => 'create',
+  #   :token => '254c4b1c7d312142a0c2804e09308aefd690d1b80077812754eef51bf3162e11b4cc6e1d8471a55f6f7e94cf',
+  #   :number => friend_number,
+  #   :message => text_message
+  # }
 
 # Here we're going to create a URL that we can put into a browser that will call the API
-query_params = URI.encode_www_form(api_call_hash)
-base_url = 'https://api.tropo.com/1.0/sessions?'
-my_final_url =  base_url + query_params
+# query_params = URI.encode_www_form(api_call_hash)
+# base_url = 'https://api.tropo.com/1.0/sessions?'
+# my_final_url =  base_url + query_params
 
-HTTParty.get(my_final_url)
-  #message =  get_personal_email_text(first_name , last_name, email , num_months_since_contact, entries_array, from_name)
+# HTTParty.get(my_final_url)
+  message =  get_personal_email_text(first_name , last_name, email , num_months_since_contact, entries_array, from_name)
 
-  #send_email(name, email, from_name, from_name, subject, message)
+  send_email(name, email, from_name, from_name, subject, message)
 end
 
 # # open the CSV file for "reading" (the little r)

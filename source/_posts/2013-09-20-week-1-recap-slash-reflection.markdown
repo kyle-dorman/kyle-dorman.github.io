@@ -5,8 +5,8 @@ date: 2013-09-20 09:34
 comments: true
 categories:
 ---
-{% email of champions - API.rb %}
-puts "look out APIs here I come" unless sn00d
+{% codeblock e-mail of champions - API.rb %}
+puts "look out APIs here I come!" unless sn00d
 {% endcodeblock %}
 
 Day 5 / Day 20. Week one of Fullstack is almost over. Yesterday was a really fun day. We used pair programming for the first time. ALthough my ruby skills are probably better then most of the people here, I still found lots for benifits from paired programming. When I wasn't on the keyboard I had to vocalize what I thought we should do instead of typing it. This slowed my thiking process now and gave me a chance to catch some of my mistakes. It also made me explain why I thought we should do one method vs. another and vocalize what information we ahd and what we wanted to do with it. I also think that my typing is not amazing yet so not being on the computer let me continue to think instead of stopping and starting while I typed. Which is what I'm doing now lol.
