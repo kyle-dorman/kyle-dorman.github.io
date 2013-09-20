@@ -4,7 +4,7 @@
   <title><![CDATA[Category: FullStack | a 'we'blog]]></title>
   <link href="http://kyle-dorman.github.io/blog/categories/fullstack/atom.xml" rel="self"/>
   <link href="http://kyle-dorman.github.io/"/>
-  <updated>2013-09-20T09:57:50-04:00</updated>
+  <updated>2013-09-20T10:12:58-04:00</updated>
   <id>http://kyle-dorman.github.io/</id>
   <author>
     <name><![CDATA[Kyle Dorman]]></name>
@@ -18,9 +18,10 @@
     <link href="http://kyle-dorman.github.io/blog/2013/09/17/first-post/"/>
     <updated>2013-09-17T11:21:00-04:00</updated>
     <id>http://kyle-dorman.github.io/blog/2013/09/17/first-post</id>
-    <content type="html"><![CDATA[<p>{% codeblock I am a secret n00b- sn00b.rb %}
-puts &ldquo;Hello World!&rdquo; if sn00b
-{% endcodeblock %}</p>
+    <content type="html"><![CDATA[<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>I am a secret n00b- sn00b.rb </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="nb">puts</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="no">Hello</span> <span class="no">World</span><span class="o">!&amp;</span><span class="n">rdquo</span><span class="p">;</span> <span class="k">if</span> <span class="n">sn00b</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>This is my first blog post. Why is Markup so easy. Its like you don&rsquo;t have to use any code at all. Very interesting.</p>
 
