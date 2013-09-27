@@ -4,7 +4,7 @@
   <title><![CDATA[a 'we'blog]]></title>
   <link href="http://kyle-dorman.github.io/atom.xml" rel="self"/>
   <link href="http://kyle-dorman.github.io/"/>
-  <updated>2013-09-20T10:13:32-04:00</updated>
+  <updated>2013-09-27T13:18:06-04:00</updated>
   <id>http://kyle-dorman.github.io/</id>
   <author>
     <name><![CDATA[Kyle Dorman]]></name>
@@ -12,6 +12,46 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[the wild west a.k.a 'week 2']]></title>
+    <link href="http://kyle-dorman.github.io/blog/2013/09/27/the-wild-west-a-dot-k-a-week-2/"/>
+    <updated>2013-09-27T10:17:00-04:00</updated>
+    <id>http://kyle-dorman.github.io/blog/2013/09/27/the-wild-west-a-dot-k-a-week-2</id>
+    <content type="html"><![CDATA[
+
+<figure class='code'><figcaption><span>metaprograming - .send.rb </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="nb">puts</span> <span class="s2">&quot;something meta this way comes&quot;</span> <span class="k">unless</span> <span class="n">hardcoded</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Week 2!
+It might be easier to keep track of weeks than days. So lets say week 2(4) and leave it at that. Topics I want to talk about paired programming and meta programming.</p>
+
+<p>Paired programming is popular programming style (maybe those arn&rsquo;t the right words) where two programmers work together on the same project using 1 computer. In paired programming 1 programmer writes tests they expect the program to pass and then the other programmer takes over an writes code to pass the test. This approach is called ping-pong or red-green programming. Programmers pass the keyboard back and forth, which is where the ping pong comes from. After the first programmer writes the test, all the tests are run and b/c the functionality in the program has not been written yet, the tests fail. Failed tests show up as red in the command prompt (*you have to set the tests to show colors). Then the second programmer writes the code to have the tests pass. Once the code is written the tests are run again and if the program has been written correctly, (sort of an arbitrary idea) the tests will pass. The functionality can then be changed, or &lsquo;refactored&rsquo;, to clean it up or just write it better. Having tests written out is really nice bevause it means that if your code changes you will always know if changing one small thing will effect anything else in your code. The ping-pong/red-green process continues until they have competed the project (or atleas thats what I think, but we&rsquo;ve only been doing 1-2 day projects).</p>
+
+<p>The downsides of paired programming are obvious. A company could be paying two programmers to do the work of one and the better programmer can dominate the project while the other sits back and doesn&rsquo;t contribute. But the pros far outweigh the cons. My favorite benefit is that it forces eah person to vocalize what they are thinking. ften times I will have an inkling of what I should be doing and then dive into the project without fully fleshing out my idea. In paired programming you normally explain what you think you are about to write to the person you are working with before you write it. If my idea is only partly formed or has some falicy, it becomes obvious while I am speaking. Additioanlly, if I understand a concept, or rather think I understand a concept and my partner does not, I get to explain it to them and along the way learn a little bit more about the concept because I am trying to clearly explain it to someone else. The fli[p side of this is if I don;t understand something I have someone sitting next to me who is willing and able to explain things to me. Other things I benifit from are having a second person around to watch for syntax, typos and gramatical mistakes. Another important benefit which someone mentoned today is that diring paired programing, you can&rsquo;t really goof off. And to be honest, you don&rsquo;t feel the need to goof off nearly as much. Rather than just staring at a screen and feeling the constant need to check if ESPN posted another article about the NHL, I feel fully engaged in the problem I am sovling.</p>
+
+<p>Overall, I feel like I have been the more experienced programmer in the 3 pairs I have been in. Even so, I don&rsquo;t think I would have completed the project much faster if at all, had I been working by myself. My partner has saved me from entering a fruitless rabbit hole many times. Also becasue someone is watching me type my code, I think I write much cleaner code. I used better variable names, space things out better and am more willing to write helper functions.</p>
+
+<p>I&rsquo;m pretty sure EnerNOC, where I used to work, does not use pair programming at all. I think they do do some type of testing (well ya, obviously they test things kyle) but not exactly the types of things we did here. I know the phrase &lsquo;acceptance criteria&rsquo; was passed around which seems similar to what we are doing in red-green testing, but I don&rsquo;t think use it as liberally as we did in our work.</p>
+
+<p>Ok so thats paired programming.</p>
+
+<p>meta programming:
+is probably not the right phrase. but i like it. (also im going to stop capitalizing everything) . meta programming is basically programming code to write more code. it is understanding that whatever code you need may not exist yet but based on a few inputs, we know what functions we might want to create. some people find this very confusing but i love it. for me its just recognizing patterns. i think day-to-day it probably isnt used too often but the few times you need it, it can be super powerful. to me powerful means it can handle many different cases and hopefully cases you dont even conceptualize when you write the code.</p>
+
+<p>im sort of we&#8217;blog&#8217;ed out for now.</p>
+
+<p>oh one other thing I worked on this week was linking to the facebook api. that was fun. hard because my javascript skills are subpar but its comeing alont. i am trying to create a simple site where people can sign up with facebook. more to come</p>
+
+<p>Cheers,
+Kyle</p>
+
+<p>P.S. Please forgive any grammatical or spelling mistakes</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[week 1 recap/reflection]]></title>
