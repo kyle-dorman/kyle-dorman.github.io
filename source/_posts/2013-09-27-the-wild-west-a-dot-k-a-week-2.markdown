@@ -6,7 +6,7 @@ comments: true
 categories:
 ---
 
-{% codeblock metaprograming - .send().rb %}
+{% codeblock metaprograming - .send.rb %}
 puts "something meta this way comes" unless hardcoded
 {% endcodeblock %}
 

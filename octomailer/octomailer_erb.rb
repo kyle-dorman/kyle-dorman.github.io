@@ -47,8 +47,9 @@ blog_content = Feedzirra::Feed.parse(File.open(atom_path).read)
 
 entries_array = []
 blog_content.entries.each do |entry|
-  if entry.published > 1.days.ago
+  if entry.published > 2.days.ago
     entries_array << entry
+    puts entries.class
   end
 end
 
@@ -84,7 +85,7 @@ csv_file.each do |row|
 # HTTParty.get(my_final_url)
   message =  get_personal_email_text(first_name , last_name, email , num_months_since_contact, entries_array, from_name)
 
-  send_email(name, email, from_name, from_name, subject, message)
+  # send_email(name, email, from_name, from_name, subject, message)
 end
 
 # # open the CSV file for "reading" (the little r)
