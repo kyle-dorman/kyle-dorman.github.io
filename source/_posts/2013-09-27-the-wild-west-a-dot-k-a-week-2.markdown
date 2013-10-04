@@ -19,7 +19,7 @@ The downsides of paired programming are obvious. A company could be paying two p
 
 Overall, I feel like I have been the more experienced programmer in the 3 pairs I have been in. Even so, I don't think I would have completed the project much faster if at all, had I been working by myself. My partner has saved me from entering a fruitless rabbit hole many times. Also becasue someone is watching me type my code, I think I write much cleaner code. I used better variable names, space things out better and am more willing to write helper functions.
 
-I'm pretty sure EnerNOC, where I used to work, does not use pair programming at all. I think they do do some type of testing (well ya, obviously they test things kyle) but not exactly the types of things we did here. I know the phrase 'acceptance criteria' was passed around which seems similar to what we are doing in red-green testing, but I don't think use it as liberally as we did in our work.
+I'm pretty sure where I used to work, does not use pair programming at all. I think they do do some type of testing (well ya, obviously they test things kyle) but not exactly the types of things we did here. I know the phrase 'acceptance criteria' was passed around which seems similar to what we are doing in red-green testing, but I don't think use it as liberally as we did in our work.
 
 Ok so thats paired programming.
 

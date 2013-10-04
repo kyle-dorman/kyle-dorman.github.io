@@ -14,8 +14,11 @@
 
   %>
   <p><%entries_array.each do |entry|%>
-      <%="#{entry.published.strftime("%d/%b/%Y")}"%>
-      <a href=<%="#{entry.url}"%>><%="#{entry.title}"%></a>
+      <%="#{entry.published.strftime("%d/%b/%Y")}"%><br>
+      <b><%="#{entry.title}"%></b>
+      <p>Preview:</p>
+      <%= entry.content[entry.content.index("<p>Week "),1000] %><br>
+      <a href=<%="#{entry.url}"%>><%="-read more"%></a>
       <%end%>
     </p>
   <p>
