@@ -4,7 +4,7 @@
   <title><![CDATA[a 'we'blog]]></title>
   <link href="http://kyle-dorman.github.io/atom.xml" rel="self"/>
   <link href="http://kyle-dorman.github.io/"/>
-  <updated>2013-09-27T13:18:06-04:00</updated>
+  <updated>2013-10-04T10:22:14-04:00</updated>
   <id>http://kyle-dorman.github.io/</id>
   <author>
     <name><![CDATA[Kyle Dorman]]></name>
@@ -12,6 +12,41 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[week 3 in review]]></title>
+    <link href="http://kyle-dorman.github.io/blog/2013/10/04/week-3-in-review/"/>
+    <updated>2013-10-04T09:16:00-04:00</updated>
+    <id>http://kyle-dorman.github.io/blog/2013/10/04/week-3-in-review</id>
+    <content type="html"><![CDATA[
+
+<figure class='code'><figcaption><span>pis_in_the_sky - api.rb </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="nb">puts</span> <span class="s2">&quot;a website I will build today&quot;</span> <span class="k">unless</span> <span class="n">web_crawlers</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Week 3!</p>
+
+<p>Hello World. Week 3 is almost over. During the week it felt like we were moving slowly but now that I&rsquo;m reflecting on what I learned, it feels like a lot. Monday we practiced designing a database for different website. That was a really fun exercise for me. I have a really easy time understanding how different tables connect together. We then moved on to ActiveRecord. ActiveRecord is a gem that amount other things communicated between ruby and sql. Basically it takes in ruby code and converts it to sql select, update, ect. statements. This is really useful because it allows developers to work in ruby and rails (ActiveRecord is included in rails) while trying to fetch data fro the database. I struggled with this a little because SQL has become so intuitive to me and ActiveRecord required a weird SQL-Ruby combo syntax which I wasn&rsquo;t use to. Not too big of a deal though, for the most part I will always know what SQL statement I want and can work backwards to get the ruby/ActiveRecord statement I need. After this we worked on connecting tables with ActiveRecord. Also very useful. There were a few funky relationships which I could conceptually understand but transforming that into ruby/ActiveRecord felt a little funny.</p>
+
+<p>On Wednesday we started working with Sinatra. Sinatra is basically Rails-lite. It works with ActiveRecord but doesn&rsquo;t have all the ActionController stuff. This was great for two reasons. 1. It makes Sinatra smaller and easier to use on smaller projects which require less pages. 2. It was a great to learn Routes.
+Routes, in my words, are the combination or HTTP requests and web addresses which tell a web server what a user wants to do. When you visit a websites homepage you are probably using the GET HTTP verb and visiting the &lsquo;/&rsquo; page. If you are signing up for a website you are probably on a &lsquo;/signup&rsquo; page (or whatever name the website decides to use) and when you click the &lsquo;sign up&rsquo; button you are using either the POST or PUT HTTP verb. A POST verb will tell a web server that you are sending it data and are asking to make an update or insert into the database.</p>
+
+<p>After we played with Sinatra I decided to update my applepicking website to use Sinatra and build a form of my own instead of cheating and using a google form. Part of the reason I used a google form was because I didn&rsquo;t know how to create a database on Heroku (a free website hosting service) but we covered how to do this while doing the Sinatra tutorial. While going over how to update my website with David, he showed me how to use a new site.gem/api called Stripe to allow users to pay for the applepicking trip while signing up using my site. How cool is that?! &lsquo;So cool, Kyle.&rsquo; Awe thanks anonymous reader. So basically my site can go from a clunky single page to a full fledged sign-up site this weekend. Boom its happening.</p>
+
+<p>Today we are going to start building a web scraper. Web scrappers, also called web crawlers, move around websites on their own reading html text and navigating pages to pull useful information. I&rsquo;m really excited about this project because I actually had a plan for a website built around a web scrapper fetching university academic calendars and then aggregating then in one site. Be on the look out for springbreak.io, its gunna be big.</p>
+
+<blockquote><p>springbreak.io, its gunna be big</p></blockquote>
+
+<p>So thats the week. We also learned about the internet on Wednesday. I am going to try and write a full post about the internet (its a big deal) tomorrow to explain it to all my faithful we&#8217;blog&#8217; followers and to wrap my own head around it.</p>
+
+<p>Cheers,
+Kyle</p>
+
+<p>P.S. I found out sublimetext2 has a spell check, all spelling mistakes are no longer forgivable.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[the wild west a.k.a 'week 2']]></title>
@@ -35,7 +70,7 @@ It might be easier to keep track of weeks than days. So lets say week 2(4) and l
 
 <p>Overall, I feel like I have been the more experienced programmer in the 3 pairs I have been in. Even so, I don&rsquo;t think I would have completed the project much faster if at all, had I been working by myself. My partner has saved me from entering a fruitless rabbit hole many times. Also becasue someone is watching me type my code, I think I write much cleaner code. I used better variable names, space things out better and am more willing to write helper functions.</p>
 
-<p>I&rsquo;m pretty sure EnerNOC, where I used to work, does not use pair programming at all. I think they do do some type of testing (well ya, obviously they test things kyle) but not exactly the types of things we did here. I know the phrase &lsquo;acceptance criteria&rsquo; was passed around which seems similar to what we are doing in red-green testing, but I don&rsquo;t think use it as liberally as we did in our work.</p>
+<p>I&rsquo;m pretty sure where I used to work, does not use pair programming at all. I think they do do some type of testing (well ya, obviously they test things kyle) but not exactly the types of things we did here. I know the phrase &lsquo;acceptance criteria&rsquo; was passed around which seems similar to what we are doing in red-green testing, but I don&rsquo;t think use it as liberally as we did in our work.</p>
 
 <p>Ok so thats paired programming.</p>
 
