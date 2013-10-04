@@ -4,7 +4,7 @@
   <title><![CDATA[a 'we'blog]]></title>
   <link href="http://kyle-dorman.github.io/atom.xml" rel="self"/>
   <link href="http://kyle-dorman.github.io/"/>
-  <updated>2013-10-04T10:22:14-04:00</updated>
+  <updated>2013-10-04T10:45:00-04:00</updated>
   <id>http://kyle-dorman.github.io/</id>
   <author>
     <name><![CDATA[Kyle Dorman]]></name>
@@ -20,7 +20,7 @@
     <id>http://kyle-dorman.github.io/blog/2013/10/04/week-3-in-review</id>
     <content type="html"><![CDATA[
 
-<figure class='code'><figcaption><span>pis_in_the_sky - api.rb </span></figcaption>
+<figure class='code'><figcaption><span>pie_in_the_sky - api.rb </span></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="nb">puts</span> <span class="s2">&quot;a website I will build today&quot;</span> <span class="k">unless</span> <span class="n">web_crawlers</span>
 </span></code></pre></td></tr></table></div></figure>
