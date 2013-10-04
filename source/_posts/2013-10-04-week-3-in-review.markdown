@@ -6,7 +6,7 @@ comments: true
 categories:
 ---
 
-{% codeblock pis_in_the_sky - api.rb %}
+{% codeblock pie_in_the_sky - api.rb %}
 puts "a website I will build today" unless web_crawlers
 {% endcodeblock %}
 
