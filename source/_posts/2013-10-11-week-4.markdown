@@ -1,0 +1,24 @@
+---
+layout: post
+title: "week 4, one third complete"
+date: 2013-10-11 12:01
+comments: true
+categories:
+---
+
+{% codeblock i 'git' code - octocat.rb %}
+puts "its a rails new day" unless false
+{% endcodeblock %}
+
+Week 4!
+
+This week we did two rails projects. These were full on rails projects. I definitly benefited from having done a little rails in the past. Mostly I was use to the file setup in the left hand nav of sublime. We first made a linker app which allows you to forward one web address to a longer web address. Becasue twitter only allows post to have 140 characters, linker apps have become really popular for people posting on twitter. At one point there was a fewar that the internet could be crippled if the linkker apps went down. There could basically be a bunch of dead links all over the internet which people rely on to get to thier favourite sites/pages. The linker app helped me get my rails confidence up as I worked through making views and controllers and models. We then built a new and improved stackworld. This was a great project for me. I learned alot. Jorge and I made ours really customized. We put the item creation and connection creation in the left hand nav of our room pages. This was cool because I had to think about what a controller and view really are doing instead of just one to one connecting a controller method to a view. I also learned more about powerful rails methods line has_many and form_for and others. I really wanted to try getting pusher to work. We put some architexture together to let it integreate but sort of ran out of time. Probably better to just keep moving. I again feel that we have fallen behind. I thought we would start the large group mock-kickstarter project this week but we will just end up taking a test and starting next week. Oh ya we have a test. The test is a review of the first 3 weeks. I think I will be fine for it but do want to revuew the action controller stuff. I think my confidence in my sql skills was too high and as a result I didn't learn everything for the action controller stuff. Mostly syntax stuff. Conceptually I think I'm fine. Byt there is no teason not to reuvuw this stuff a little.
+
+Other stuff. I'm thinking about doing a hackathon on the 19th. Its a mobile payments hackathon. I'm thinking I could build something that will allow people to incorporate payments into a google form. I'd love to crush that and really get my name out there ya know?
+
+Ok thats all I've got.
+
+Cheers,
+Kyle
+
+P.S. get on my ass about this internet explanation we'blog' post. It will be good for both of us.
