@@ -9,8 +9,7 @@
   <meta name="author" content="Kyle Dorman">
 
   
-  <meta name="description" content="week 3 in review Oct 4th, 2013 pie_in_the_sky - api.rb 1
-puts &quot;a website I will build today&quot; unless web_crawlers Week 3! Hello World. Week &hellip;">
+  <meta name="description" content="The Internet. What it is, where it comes from, and where its going Oct 15th, 2013 A few weeks ago Nimit did a presentation on &lsquo;The Internet& &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -96,6 +95,143 @@ puts &quot;a website I will build today&quot; unless web_crawlers Week 3! Hello 
   </header>
   <section id="main">
       
+  
+  
+    <article class="post">
+      <div class="sharing-box">
+  
+  
+  
+  <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+      
+  <header>
+    
+      <h2 class="entry-title">
+        
+        <a href="/blog/2013/10/15/the-internet/">The Internet. What it is, where it comes from, and where its going</a>
+        
+      </h2>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-10-15T09:42:00-04:00" pubdate data-updated="true">Oct 15<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <p>A few weeks ago Nimit did a presentation on &lsquo;The Internet&rsquo;. All of it. I&rsquo;ve been meaning to blog about it since then as a way to internalize everything we went over but have been puting it off because I hate writing. But yesterday, David&rsquo;s friend and fellow programmer, Andy Brett, came to FullStack and spoke about many topics including coding interviews. He mentioned one of his favorite questions to ask an interview-ie was how the internet works. After today you and I will both be able to fully answer that question.</p>
+
+<p><a href="https://www.youtube.com/watch?v=xSLlZh9yelk"><img src="http://sequart.org/images/Dark-Knight-Shooting-Joker-Severed-Head-Card-Illuminati1.jpg" alt="Begin" /></a></p>
+
+<p>the internet is a big network of servers. Servers are computers that many people can access at a time and responce to internet requests.</p>
+
+<p>URL: A url has five parts. Ex: <a href="http://sports.yahoo.com/nhl">http://sports.yahoo.com/nhl</a>
+The first part of this URL is the transfer protocol. More on this later. the &lsquo;sports&rsquo; part is a sub-domain. These go before the domain name and are free. I believe they have become more popular recently. &lsquo;yahoo&rsquo; is the domain name. Great name! Domain names cost money. You can rent or buy them from sites like godaddy.com. The &lsquo;com&rsquo; is the top level domain. There are a ton of top level domains but com is by far the most popular. The coolest top level domain out there right now is io which stands for indian ocean. It makes me think of the iphone for some reason. probalby from ios. &lsquo;/nhl&rsquo; is the sub-directory or file. This part of the url, like the sub-domain, is free. This is where all the routing parts of a url will go.</p>
+
+<p>A request: What happens when we type google.com into the browser url? The browser first resolves the host-name by making a DNS request over TCP/IP. We&rsquo;ll be coming back to TCP/IP. DNS stands for Domain Name System. This set of servers is responsible for translating web addresses into ip addresses. There are a few steps in this process. When you make a request, your browser first checks your local cache for the IP address. The IP address of websites you visit often are ctored on your computer so you don&rsquo;t even have to make a DNS lookup request. Small things like this can make web brosing faster. If you do not have the site cached on your box, your browser will send a request to the local DNS server. Local here means exactly what you think it means, the server closest to your current location. So your DNS server will change as you change locations. This DNS server, like your browser, has a chache of web addresses and ip addresses. This cache is much larger then your local box cache. If the sever has the ip address it sends the address back to your browser. If the DNS server does not have your request, it becomes a DNS client and requess the IP address from other DNS servers. this is a recursive process and will continue up the DNS heirarchy until the request reaches one of the 13 &lsquo;root&rsquo; servers. These servers maintain the entier database of web addresses and thier ip addresses. 10 of these are located in the US, one in Japan, one in London, and one in Sweden. Kind of a big deal. Anyways, back to our request. If out request is not found on any lower level DNS server, the request goes to the root server. The root server will send back the ip address through the chain of DNS servers, if it has one, to your browser. This all happens at crazy fast speeds and that was only the first step of the process. We haven&rsquo;t even requested anydata from the website we are actually intereted in. But now that we have an ip address, we can make that request. The most common request is a GET request. This means we are only asking for data from the server, not sending any to the server. This GET request travels to your ISP (internet sevice provider, e.g. Time Warner, Verizon) your ISP will basically send this message along until it reaches the correct server. Your request can travel all around the country looking for the correct server. Generally servers will know a little more about where the IP address is than the previous server and will route the request as efficiently as it knows how to. There servers are different than the web server we are trying to reach. They are only trying to route internet traffic. These servers are owned by ISPs. ISPs allow traffic to pass between thier servers without much retriction. This has allowed the internt to become much faster. Eventaully (and when I say eventually, I mean within a second and probably closer to 200 miliseconds) our GET request will reach the correct server. Here, the server will take the HTTP verb, ours is GET, and the url, process the request and return data to your browser. This is just an overview of a request but there is definitly alot more depth than what I described here.</p>
+
+<p>Fun things to do to learn more about the internet: open a command prompt, terminal, ect, and type in nslookup google.com. This returns your IP address and google&rsquo;s IP addresses. Your box has an internal IP address addigned by the router you are currently using. This router also has an IP address. This IP address is an external IP address and is used so web servers know where to send information to. You can find out your router&rsquo;s ip address by going to google and typing, whats my ip address. Thanks google! Other fun things, in the terminal type traceroute goggle.com. This shows you the IP address of where your request goes and the time it takes to get to the next server. Very interesting. Type ping yahoo.com in the terminal. This will continually ping yahoo.com to see how long it takes to recueve a response from thier servers. Press ctrl C to end the request cycle. Once ended, ping will also tell you an average amount of time to took to poing the server. One more fun one. Type whois kyledorman.com. Boooom! Its me. Who is will give you a bunch of information about the person, or organization who is currently using the web address. You can see that they messed mine up and put my state as NOrth Carolina not New York. Oh well. Some companies will pay to have this information hidden but I left it up there. Its kind fo fun. If you want to see some weird stuff type out whatis google.com. People have tacked thier websites to the end of google somehow so they also whow up ont he whois list.</p>
+
+<p>IP/TCP: IP stands for Internet Protocol, TCP for Transmission Control Protocol. IP is hte principal communications protocol for the internet for relaying data across netowrk boundires. It is tasked with delivering packets of data from the cource host to the destiniation host based on IP addresses in the packet headers. IP uses n end to end principle in its design. This basically means the internet is assumed to be unreliable at any one point so most error-checking takes place the end points of the process. For our purposes this means our computer and the web server. There is a ton more I could learn about this subject but for now I will let it be. One last note, MTU stands for maximum transmission unit and is the max size one packet of data can be. When google first started out, in 1998, its search page fit entirly in one packet, i.e. it was one MTU in size, meaning it would load very quickly. They don&rsquo;t do this anymore. Too much information to send out But it would be fun if they reverted to this for a dey or two some time.</p>
+
+<p>Webserver: Above I explained a web request and talked briefly about web servers but there is much more to a web server than simply serving a web request (Server: a computer tha &lsquo;serves&rsquo; web requests, ohhhhhh). A web server using runs a UNIX OS or Windows Server. Web servers respond to HTTP requests. There are ~20 HTTP verbs but the most common 4 are GET, POST, PUT, and DELETE. The HTTP verb and the route you are requesting will tell the web server what exactly you want the web server to do. As I said above, the web server serves lots of GET requests for viewing a page but will also serve many PUT and POST requests for adding content to pages. PUT requests are great because they will only be sent once no matter how many times you click enter or click a button. But they are not well supported by servers, so rails emulated PUT requests using POST. I don&rsquo;t have too much more on that for now. Often times DELETE is also emulated using a POST request. To some extent I think Rails is trying to use more HTTP verbs not less.</p>
+
+<p>Lastly, response codes. When a web srever sends a response to our request, it includes a response code that tell sus the result of the request. Codes in the 200s indicate success. Codes in the 300s indicate redirection. Codes in the 400s indicate and error of some kind. I&rsquo;ve been seeing alot of those latly. Whomp.</p>
+
+<p>Ok so thats the internet in a nut shell. I wanted to spend more time talking about the history of the internet and where I think its headed but this turned out to be quite meaty on its own. Let me know if you have any questions.</p>
+
+<p>Fast and Firm,
+Kyle (KED)</p>
+
+  
+  
+
+
+    </article>
+  
+  
+    <article class="post">
+      <div class="sharing-box">
+  
+  
+  
+  <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+      
+  <header>
+    
+      <h2 class="entry-title">
+        
+        <a href="/blog/2013/10/11/week-4/">week 4, one third complete</a>
+        
+      </h2>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-10-11T12:01:00-04:00" pubdate data-updated="true">Oct 11<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  
+
+<figure class='code'><figcaption><span>i &#8216;git&#8217; code - octocat.rb </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="nb">puts</span> <span class="s2">&quot;its a rails new day&quot;</span> <span class="k">unless</span> <span class="kp">false</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Week 4!</p>
+
+<p>This week we did two rails projects. These were full on rails projects. I definitly benefited from having done a little rails in the past. Mostly I was use to the file setup in the left hand nav of sublime. We first made a linker app which allows you to forward one web address to a longer web address. Becasue twitter only allows post to have 140 characters, linker apps have become really popular for people posting on twitter. At one point there was a fewar that the internet could be crippled if the linkker apps went down. There could basically be a bunch of dead links all over the internet which people rely on to get to thier favourite sites/pages. The linker app helped me get my rails confidence up as I worked through making views and controllers and models. We then built a new and improved stackworld. This was a great project for me. I learned alot. Jorge and I made ours really customized. We put the item creation and connection creation in the left hand nav of our room pages. This was cool because I had to think about what a controller and view really are doing instead of just one to one connecting a controller method to a view. I also learned more about powerful rails methods line has_many and form_for and others. I really wanted to try getting pusher to work. We put some architexture together to let it integreate but sort of ran out of time. Probably better to just keep moving. I again feel that we have fallen behind. I thought we would start the large group mock-kickstarter project this week but we will just end up taking a test and starting next week. Oh ya we have a test. The test is a review of the first 3 weeks. I think I will be fine for it but do want to revuew the action controller stuff. I think my confidence in my sql skills was too high and as a result I didn&rsquo;t learn everything for the action controller stuff. Mostly syntax stuff. Conceptually I think I&rsquo;m fine. Byt there is no teason not to reuvuw this stuff a little.</p>
+
+<p>Other stuff. I&rsquo;m thinking about doing a hackathon on the 19th. Its a mobile payments hackathon. I&rsquo;m thinking I could build something that will allow people to incorporate payments into a google form. I&rsquo;d love to crush that and really get my name out there ya know?</p>
+
+<p>Ok thats all I&rsquo;ve got.</p>
+
+<p>Cheers,
+Kyle</p>
+
+<p>P.S. get on my ass about this internet explanation we&#8217;blog&#8217; post. It will be good for both of us.</p>
+
+  
+  
+
+
+    </article>
   
   
     <article class="post">
