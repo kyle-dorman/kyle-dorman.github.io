@@ -9,8 +9,8 @@
   <meta name="author" content="Kyle Dorman">
 
   
-  <meta name="description" content="week 9 o&#8217;Projects Nov 15th, 2013 chatterJS - node.js 1
-puts &quot;rails oh rails how I miss thee&quot; if node Live from New York, its&hellip &hellip;">
+  <meta name="description" content="week 10 Nov 22nd, 2013 the premier chatting application - chatter.js 1
+puts &quot;structure keeps me sane&quot; unless false Week 10 This week flew &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -96,6 +96,77 @@ puts &quot;rails oh rails how I miss thee&quot; if node Live from New York, its&
   </header>
   <section id="main">
       
+  
+  
+    <article class="post">
+      <div class="sharing-box">
+  
+  
+  
+  <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+      
+  <header>
+    
+      <h2 class="entry-title">
+        
+        <a href="/blog/2013/11/22/week-10/">week 10</a>
+        
+      </h2>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-11-22T10:04:00-05:00" pubdate data-updated="true">Nov 22<span>nd</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  
+
+<figure class='code'><figcaption><span>the premier chatting application -  chatter.js </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">puts</span> <span class="s2">&quot;structure keeps me sane&quot;</span> <span class="nx">unless</span> <span class="kc">false</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Week 10</p>
+
+<p>This week flew by. Fastest week so far. I&rsquo;m in the mood for an in depth reflection, so for the non-techies out there, put your skim goggles on.</p>
+
+<p>Last Saturday I took some steps backward with ChatterJS and began forming classes and providing some structure to the app. The most important or distinguishable feature in my app is that the conversations persist as a user moves around a website. Last week, I was using the socket which is established when a user navigates to the site using ChatterJS as the base unit. When a user navigated to a new page, the socket is disconnected, and a new socket is established. Because was not a dependable source of truth, I could not rely on socketIO&rsquo;s structure for my chatting app. Instead, I created a User class (which seems obvious in retrospect). The class gets the username, and potentially other useful information from the site the user is visiting. When the user logs in the site triggers a login function to my app, which lets the chatter app know to open the chat to the logged in user. I then assign the user an id on my node server and add the id as a cookie to their browser. The user class, along with a username and id, also has a socket and a list of rooms they are currently chatting in. SocketIO has an extremely useful rooms concept, which enables you to add sockets to a room and then send messages only to the specific sockets in that room. Last week I could only create one giant room, which was the whole app. The socketIO room, while useful, was not structured exactly how I wanted it to be, so I created a Rooms class. A room has a list of user ids, a list of messages, and an id. The room id was also stored in the User model and I used as the room name to emit messages from. I also created a simple Message class which had information about each message sent, username, user id, and text. The users and rooms are stored in a UserCollection and RoomCollection respectively. These collections are stored in a global ChatterApp variable on the server side. By creating these classes, I began to map my logic out into models separate from the app.js file which began acting like a controller. On the client side, I split my logic into a model/receiving controller and a view/sending controller. I&rsquo;m not completely satisfied with my client side approach yet. I am still cluttering a few pieces together. Currently I am using requireJS to collect all my separate javascript files into one large file to send to the client. As a result, I&rsquo;ve taken some creative measures to get my two files to play nice with each other.</p>
+
+<p>Currently I am able to login in multiple users, see the logged in users in the users list, click on users to open chats with them, chat with the users, leave a chat, and get notified when a user leaves a what. When a users navigates to a new page (which I am simulating by refreshing the page) all information, logged in users, open chats, and messages, are all reloaded on the new page. And because I am using node and sockets everything is wicked fast. I&rsquo;m also not using a database right now, which actually wouldn&rsquo;t change too much because its a node server, but I&rsquo;m probably saving myself from some crazy timing issues by forgoing a database.</p>
+
+<p>My next steps are to broadcast updates to a user&rsquo;s status when they navigate to a new page or interact with the app. Active users could be green, idle users, yellow and so forth. Currently rooms can only have two users, but I would like to make it so multiple users could be in a room. I&rsquo;ve stalled on this because I can&rsquo;t decide how the UI of adding a third person to a chat should look. The app isn&rsquo;t Mozilla compatible right now, but this should just be a quick CSS fix. The chat widgets currently are in line with the rest of the HTML on the page but I would like to raise the z access on all the chat pieces so that html on the page will not be affected by adding the chatter app (I do have a slide down effect to allow users to hide chatter if they don&rsquo;t need it at some point). And lastly, my current design makes a large assumption that the chatter app is only running on one website. This will probably require a big fix where I rework the code to namespace every user and room with the current url. This functionality is provided to socketIO so it won&rsquo;t be terribly difficult, but definitely a process. Hopefully I can finish this up in the next few days so that I can move on to P2, &lsquo;big-little matchmaker&rsquo;, where I will move back into the wonderful world of ruby on rails and hopefully get some major experience working with backbone.</p>
+
+<p>Until next time,
+Kyle</p>
+
+<p>p.s. the app name is temporary, let me know if you come up with anything better</p>
+
+<p><img src="/public/images/chatter.png" title="pic" alt="pic" /></p>
+
+  
+  
+
+
+    </article>
   
   
     <article class="post">
@@ -728,85 +799,6 @@ Kyle</p>
 Kyle</p>
 
 <p>P.S. please forgive any spelling mistakes</p>
-
-  
-  
-
-
-    </article>
-  
-  
-    <article class="post">
-      <div class="sharing-box">
-  
-  
-  
-  <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
-  
-</div>
-
-      
-  <header>
-    
-      <h2 class="entry-title">
-        
-        <a href="/blog/2013/09/18/day18-2/">Day18(3)</a>
-        
-      </h2>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-09-18T09:12:00-04:00" pubdate data-updated="true">Sep 18<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <p><a href="http://kyle-dorman.github.io/">A link for links sake</a></p>
-
-<figure class='code'><figcaption><span>breakfast of champions- bagel.rb </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="nb">puts</span> <span class="s2">&quot;chive is the best cream cheese&quot;</span> <span class="k">unless</span> <span class="n">lox</span> <span class="ow">and</span> <span class="n">tomato</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Day 18 baby! Biggest day of the class! &ldquo;But Kyle, its only day 3 of the class. How can today be both day 18 and &lsquo;the biggest day of the class?&rdquo; Well rude imaginary person, I started doing prep-wrk for this class on September 1, so thats how its day 18, silly. AND everyday is the biggest day of the class. Leggo.</p>
-
-<p>Recap: Yesterday we bulit a blog. This blog. Blogs were origonally called weblogs. Some fancy person came along and decided to drop the &ldquo;we&rdquo; and now weblogs are called blogs. I might be a weblog guy myself. Not sure yet, but I&rsquo;ll get back to you when I know. This blog is cool because it is very customizable and everything in it uses code. To post stuff I have to send a git push request. To update visuals, I can update the html and css code. Fun stuff. Great for learning and for webloging. After we built a blog everyone int he class worked on ruby. I went through the <a href="http://testfirst.org/learn_ruby">Test First dot org</a> tutorial up through number 11 I think. I will do a few more this morning. I then built a haiku maker. We were given a file which had all the words in the dictionary and how to sound the words out which indicated how many sylabls(spelling) the word had. For this, I could randomly generate numbers which when paired together would give a haiku. Here is an example:</p>
-
-<blockquote><p>SHAFTED WILLISON</p>
-
-<p>PECH COLORISTIC TEACHING</p>
-
-<p>ACCOMPANYING</p></blockquote>
-
-<p>or this one:</p>
-
-<blockquote><p>SIDLER HEAVEN&rsquo;S</p>
-
-<p>PROPPED WATNE COIN UNGAR THIEDE FUNES</p>
-
-<p>TESTICLES BEGINS</p></blockquote>
-
-<p>Future: Today I will write a script with will find all the haikus in a book. And also finish the <em>Test First</em> stuff.</p>
-
-<p>Thats all for now. Send me a youtube video and I&rsquo;ll try to post it.</p>
-
-<p>Cheers,
-Kyle</p>
 
   
   
