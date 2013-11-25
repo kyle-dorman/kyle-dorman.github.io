@@ -7,7 +7,7 @@
                         var element = $(this);
 
                         var time = calculateTime(element.text(), settings);
-                        element.parent().find(settings.where).text(time + " min read");
+                        element.find(settings.where).text(time + " min read");
 
                         if (settings.archive) {
                                 var articleLink = element.find(settings.anchor);
@@ -30,7 +30,7 @@
 
         $.fn.minRead.defaults = {
                 where                : ".min-read",
-                wordsPerMinute        : 140,
+                wordsPerMinute        : 180,
                 archive                : false,
                 archiveText        : ".text",
                 anchor                 : ".article-link"
