@@ -30,7 +30,7 @@
 
         $.fn.minRead.defaults = {
                 where                : ".min-read",
-                wordsPerMinute        : 180,
+                wordsPerMinute        : 140,
                 archive                : false,
                 archiveText        : ".text",
                 anchor                 : ".article-link"
