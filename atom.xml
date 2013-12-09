@@ -4,7 +4,7 @@
   <title><![CDATA[a 'we'blog]]></title>
   <link href="http://kyle-dorman.github.io/atom.xml" rel="self"/>
   <link href="http://kyle-dorman.github.io/"/>
-  <updated>2013-11-25T12:17:33-05:00</updated>
+  <updated>2013-12-09T12:13:44-05:00</updated>
   <id>http://kyle-dorman.github.io/</id>
   <author>
     <name><![CDATA[Kyle Dorman]]></name>
@@ -12,6 +12,46 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[ChitChat.js]]></title>
+    <link href="http://kyle-dorman.github.io/blog/2013/12/09/why-chitchat-dot-js/"/>
+    <updated>2013-12-09T10:48:00-05:00</updated>
+    <id>http://kyle-dorman.github.io/blog/2013/12/09/why-chitchat-dot-js</id>
+    <content type="html"><![CDATA[<p>In the field of web development, I have 3 interests.</p>
+
+<ol>
+<li>Big Data</li>
+<li>Creating web apps that act and feel like native apps</li>
+<li>Bridging the gap between the real world and the digital world</li>
+</ol>
+
+
+<p><a href="" title="https://github.com/kyle-dorman/ChitChat.js/blob/master/README.md">ChitChat.js</a> is my first attempt to pursue the last interest.</p>
+
+<p>I initally concieved ChitChat.js as a way to mimic a person&rsquo;s experience roaming the world. When we change phisical locations and the people around us change locations, the people who we can physically speak to changes. If Bob and Steve are both in Starbucks, they both know they are in Starbucks and have the ablility to communicate with each other while in Startbucks. On the web, people are rarely aware that they are sharing a similar expereicne as another person at the exact same. Enter my concept for ChitChat.js V1. A google chrome extension that lets you know which of your gchat friends are on the same site as you at the same time. Maybe a video is going viral and Steve and I are both watching it at the same time. We should talk about it. This is simialr to running into a friend in a store or at the movies. Sharing expereinces make them more meaningful. In the end, I did not pursue this idea because the idea would struggle to gain traction without a user base to start with.</p>
+
+<p>Some sites, Facebook, GMail already have real-time chatting capabilites. If other sites began adding chat capabilites, the web would begin to feel more like the real world. Enter ChitChat.js V2. ChitChat.js is an open-source chat bar client and node.js server that you can easily drop into any website. I attempted to model my implementation after <a href="" title="http://disqus.com/">Disqus</a>. There is one global variable &lsquo;ChatterApp&rsquo; which name spaces all but two ChitChat.js variables and functions. A developer who wants to add chatting capabilites to thier site, need only add a script tag to the html pages where they want chatting avalible and then trigger a &lsquo;SetUsername&rsquo; function when a user logs into the site. Fortunetly or unfortunetly, unlike Disqus, this project is open source so the developer is responsible for setting up thier own node.js server, but I have written instructions to make this setup painless. It is defintily possible to make this app more dusqus-like and use 1 node server to enable chatting for multiple sites (although the code has not been written yet).</p>
+
+<p>ChitChat.js runs a node.js server, uses socket.io to create real-time chatting, uses require.js to allow 1 manifest file to load all javaScript files, and currently has no database. Its only dependancy is JQuery. When a user comes to a site running ChitChat.js, they are initally given a cookie and instantiated on the node server. If they login, the site will trigger &lsquo;chatterApp.setUsername,&rsquo; which will let the node server know that the user with the specific cookie has logged in. The node server will then send up the current state of ChitChat.js. This should just be the list of logged in users. To create seperate chats between two users I am using Socket.io&rsquo;s extremly helpful concept of a room. This allows a socket to only emit to a specific subset of sockets, i.e. the users they are sending a message to. When a user travels to a new page on the site, they will first disconnect from thier socket connection and then reconnect with a new socket. On succesful socket reconnect, the node server will send up the current state of the and any chats the user has open and all chat history. When a user leaves the site, they are removed from the list of logged in users on the site and this information is sent out to all logged in users.</p>
+
+<p>This is definetly a work in progress. There are a few known issues which I would like to fix soon:</p>
+
+<ul>
+<li><p>Currently a user can create mulitple rooms (chat windows) with the same person</p></li>
+<li><p>Users can minimize a chat window or the list of logged in users, but when they navigate to a new page, this minimized state is not reproduced</p></li>
+<li><p>Code for user logout but stays on the site has not been written</p></li>
+<li><p>Currently, users are removed when they leave the site but there are no methods writen to garbage collect rooms without any logged in users</p></li>
+<li><p>Eventually I would like to add the functionality to support mulitple sites on 1 node server. Socket.io has an interesting concpet of namespacing which could be useful but I might end writing my own code to handle this using hashes and a specific room for each site</p></li>
+<li><p>A database should be added at somepoint</p></li>
+</ul>
+
+
+<p>Cheers,</p>
+
+<p>Kyle</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[week 10]]></title>

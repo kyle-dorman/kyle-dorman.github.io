@@ -9,8 +9,8 @@
   <meta name="author" content="Kyle Dorman">
 
   
-  <meta name="description" content="week 10 Nov 22nd, 2013 the premier chatting application - chatter.js 1
-puts &quot;structure keeps me sane&quot; unless false Week 10 This week flew &hellip;">
+  <meta name="description" content="ChitChat.js Dec 9th, 2013 In the field of web development, I have 3 interests. Big Data
+Creating web apps that act and feel like native apps &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -89,6 +89,87 @@ puts &quot;structure keeps me sane&quot; unless false Week 10 This week flew &he
   </header>
   <section id="main">
       
+  
+  
+    <article class="post">
+      <div class="sharing-box">
+  
+  
+  
+  <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+      
+  <header>
+    
+      <h2 class="entry-title">
+        
+        <a href="/blog/2013/12/09/why-chitchat-dot-js/">ChitChat.js</a>
+        
+      </h2>
+    
+    <span class="min-read"></span>
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-12-09T10:48:00-05:00" pubdate data-updated="true">Dec 9<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <p>In the field of web development, I have 3 interests.</p>
+
+<ol>
+<li>Big Data</li>
+<li>Creating web apps that act and feel like native apps</li>
+<li>Bridging the gap between the real world and the digital world</li>
+</ol>
+
+
+<p><a href="" title="https://github.com/kyle-dorman/ChitChat.js/blob/master/README.md">ChitChat.js</a> is my first attempt to pursue the last interest.</p>
+
+<p>I initally concieved ChitChat.js as a way to mimic a person&rsquo;s experience roaming the world. When we change phisical locations and the people around us change locations, the people who we can physically speak to changes. If Bob and Steve are both in Starbucks, they both know they are in Starbucks and have the ablility to communicate with each other while in Startbucks. On the web, people are rarely aware that they are sharing a similar expereicne as another person at the exact same. Enter my concept for ChitChat.js V1. A google chrome extension that lets you know which of your gchat friends are on the same site as you at the same time. Maybe a video is going viral and Steve and I are both watching it at the same time. We should talk about it. This is simialr to running into a friend in a store or at the movies. Sharing expereinces make them more meaningful. In the end, I did not pursue this idea because the idea would struggle to gain traction without a user base to start with.</p>
+
+<p>Some sites, Facebook, GMail already have real-time chatting capabilites. If other sites began adding chat capabilites, the web would begin to feel more like the real world. Enter ChitChat.js V2. ChitChat.js is an open-source chat bar client and node.js server that you can easily drop into any website. I attempted to model my implementation after <a href="" title="http://disqus.com/">Disqus</a>. There is one global variable &lsquo;ChatterApp&rsquo; which name spaces all but two ChitChat.js variables and functions. A developer who wants to add chatting capabilites to thier site, need only add a script tag to the html pages where they want chatting avalible and then trigger a &lsquo;SetUsername&rsquo; function when a user logs into the site. Fortunetly or unfortunetly, unlike Disqus, this project is open source so the developer is responsible for setting up thier own node.js server, but I have written instructions to make this setup painless. It is defintily possible to make this app more dusqus-like and use 1 node server to enable chatting for multiple sites (although the code has not been written yet).</p>
+
+<p>ChitChat.js runs a node.js server, uses socket.io to create real-time chatting, uses require.js to allow 1 manifest file to load all javaScript files, and currently has no database. Its only dependancy is JQuery. When a user comes to a site running ChitChat.js, they are initally given a cookie and instantiated on the node server. If they login, the site will trigger &lsquo;chatterApp.setUsername,&rsquo; which will let the node server know that the user with the specific cookie has logged in. The node server will then send up the current state of ChitChat.js. This should just be the list of logged in users. To create seperate chats between two users I am using Socket.io&rsquo;s extremly helpful concept of a room. This allows a socket to only emit to a specific subset of sockets, i.e. the users they are sending a message to. When a user travels to a new page on the site, they will first disconnect from thier socket connection and then reconnect with a new socket. On succesful socket reconnect, the node server will send up the current state of the and any chats the user has open and all chat history. When a user leaves the site, they are removed from the list of logged in users on the site and this information is sent out to all logged in users.</p>
+
+<p>This is definetly a work in progress. There are a few known issues which I would like to fix soon:</p>
+
+<ul>
+<li><p>Currently a user can create mulitple rooms (chat windows) with the same person</p></li>
+<li><p>Users can minimize a chat window or the list of logged in users, but when they navigate to a new page, this minimized state is not reproduced</p></li>
+<li><p>Code for user logout but stays on the site has not been written</p></li>
+<li><p>Currently, users are removed when they leave the site but there are no methods writen to garbage collect rooms without any logged in users</p></li>
+<li><p>Eventually I would like to add the functionality to support mulitple sites on 1 node server. Socket.io has an interesting concpet of namespacing which could be useful but I might end writing my own code to handle this using hashes and a specific room for each site</p></li>
+<li><p>A database should be added at somepoint</p></li>
+</ul>
+
+
+<p>Cheers,</p>
+
+<p>Kyle</p>
+
+  
+  
+
+
+
+    </article>
   
   
     <article class="post">
@@ -747,79 +828,6 @@ is probably not the right phrase. but i like it. (also im going to stop capitali
 Kyle</p>
 
 <p>P.S. Please forgive any grammatical or spelling mistakes</p>
-
-  
-  
-
-
-
-    </article>
-  
-  
-    <article class="post">
-      <div class="sharing-box">
-  
-  
-  
-  <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
-  
-</div>
-
-      
-  <header>
-    
-      <h2 class="entry-title">
-        
-        <a href="/blog/2013/09/20/week-1-recap-slash-reflection/">week 1 recap/reflection</a>
-        
-      </h2>
-    
-    <span class="min-read"></span>
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-09-20T09:34:00-04:00" pubdate data-updated="true">Sep 20<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  
-
-<figure class='code'><figcaption><span>e-mail of champions - API.rb </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="nb">puts</span> <span class="s2">&quot;look out APIs here I come!&quot;</span> <span class="k">unless</span> <span class="n">sn00d</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Day 5 / Day 20. Week one of Fullstack is almost over. Yesterday was a really fun day. We used pair programming for the first time. ALthough my ruby skills are probably better then most of the people here, I still found lots for benifits from paired programming. When I wasn&rsquo;t on the keyboard I had to vocalize what I thought we should do instead of typing it. This slowed my thiking process now and gave me a chance to catch some of my mistakes. It also made me explain why I thought we should do one method vs. another and vocalize what information we ahd and what we wanted to do with it. I also think that my typing is not amazing yet so not being on the computer let me continue to think instead of stopping and starting while I typed. Which is what I&rsquo;m doing now lol.</p>
-
-<p>The API part was awesome. Defintely my first time really using an API and having some semblance of an idea why we took the steps we took. I&rsquo;d like to read over and API at sound point to understand what is really going on behind the scenes. I understand taking the API as is and not asking too many questions is generally benificial but on an general level I&rsquo;d like to understand what happens when we install a gem and then require the gem and then call the API class and its methods.</p>
-
-<p>The day we did the Learn Ruby stuff felt slow to me. Apparently I had already done most of this stuff to prepare for the AppAcademy code interview, but I didn&rsquo;t realize it until I had gone through all the exercises. I did enjoy the Haiku stuff. I like those type of mind games. I think having some extra extra challenges would have been good. Then could have kept playing with my code more.</p>
-
-<p>Yesterday I started writing a Sudoku solver. This was promted by Julian deciding to write a sudoku generator. I was thinking it through last night as I was falling asleep and I can definitly see pieces or groups that I am modeling and feel like using classes could benificial (right now I am using a complex array to keep track of everything) but still don&rsquo;t completly understand how to relate classes to each otehr and call each other&rsquo;s methods and all that jazz. *side note, that gsub! problem really shook my ruby confidence yesterday and now I keep doubting if I truly understand what I am updating. WHich is a good thing, but I definitly have questions and may be creating too many variables or may not be creating enough.</p>
-
-<p>I am excited to get into javascript. Even after doing the prep courses on javascript I still only have a basic understanding of it but realize how powerful it is and how much fun I could be having with it. It sort of feels like ruby logic but with very visual and wuick results.</p>
-
-<p>Ok thats all I got</p>
-
-<p>Cheers,
-Kyle</p>
-
-<p>P.S. please forgive any spelling mistakes</p>
 
   
   
