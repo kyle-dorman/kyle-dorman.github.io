@@ -9,8 +9,8 @@
   <meta name="author" content="Kyle Dorman">
 
   
-  <meta name="description" content="week 1 recap/reflection Sep 20th, 2013 e-mail of champions - API.rb 1
-puts &quot;look out APIs here I come!&quot; unless sn00d Day 5 / Day 20. Week &hellip;">
+  <meta name="description" content="week 3 in review Oct 4th, 2013 pie_in_the_sky - api.rb 1
+puts &quot;a website I will build today&quot; unless web_crawlers Week 3! Hello World. Week &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -89,6 +89,163 @@ puts &quot;look out APIs here I come!&quot; unless sn00d Day 5 / Day 20. Week &h
   </header>
   <section id="main">
       
+  
+  
+    <article class="post">
+      <div class="sharing-box">
+  
+  
+  
+  <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+      
+  <header>
+    
+      <h2 class="entry-title">
+        
+        <a href="/blog/2013/10/04/week-3-in-review/">week 3 in review</a>
+        
+      </h2>
+    
+    <span class="min-read"></span>
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-10-04T09:16:00-04:00" pubdate data-updated="true">Oct 4<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  
+
+<figure class='code'><figcaption><span>pie_in_the_sky - api.rb </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="nb">puts</span> <span class="s2">&quot;a website I will build today&quot;</span> <span class="k">unless</span> <span class="n">web_crawlers</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Week 3!</p>
+
+<p>Hello World. Week 3 is almost over. During the week it felt like we were moving slowly but now that I&rsquo;m reflecting on what I learned, it feels like a lot. Monday we practiced designing a database for different website. That was a really fun exercise for me. I have a really easy time understanding how different tables connect together. We then moved on to ActiveRecord. ActiveRecord is a gem that amount other things communicated between ruby and sql. Basically it takes in ruby code and converts it to sql select, update, ect. statements. This is really useful because it allows developers to work in ruby and rails (ActiveRecord is included in rails) while trying to fetch data fro the database. I struggled with this a little because SQL has become so intuitive to me and ActiveRecord required a weird SQL-Ruby combo syntax which I wasn&rsquo;t use to. Not too big of a deal though, for the most part I will always know what SQL statement I want and can work backwards to get the ruby/ActiveRecord statement I need. After this we worked on connecting tables with ActiveRecord. Also very useful. There were a few funky relationships which I could conceptually understand but transforming that into ruby/ActiveRecord felt a little funny.</p>
+
+<p>On Wednesday we started working with Sinatra. Sinatra is basically Rails-lite. It works with ActiveRecord but doesn&rsquo;t have all the ActionController stuff. This was great for two reasons. 1. It makes Sinatra smaller and easier to use on smaller projects which require less pages. 2. It was a great to learn Routes.
+Routes, in my words, are the combination or HTTP requests and web addresses which tell a web server what a user wants to do. When you visit a websites homepage you are probably using the GET HTTP verb and visiting the &lsquo;/&rsquo; page. If you are signing up for a website you are probably on a &lsquo;/signup&rsquo; page (or whatever name the website decides to use) and when you click the &lsquo;sign up&rsquo; button you are using either the POST or PUT HTTP verb. A POST verb will tell a web server that you are sending it data and are asking to make an update or insert into the database.</p>
+
+<p>After we played with Sinatra I decided to update my applepicking website to use Sinatra and build a form of my own instead of cheating and using a google form. Part of the reason I used a google form was because I didn&rsquo;t know how to create a database on Heroku (a free website hosting service) but we covered how to do this while doing the Sinatra tutorial. While going over how to update my website with David, he showed me how to use a new site.gem/api called Stripe to allow users to pay for the applepicking trip while signing up using my site. How cool is that?! &lsquo;So cool, Kyle.&rsquo; Awe thanks anonymous reader. So basically my site can go from a clunky single page to a full fledged sign-up site this weekend. Boom its happening.</p>
+
+<p>Today we are going to start building a web scraper. Web scrappers, also called web crawlers, move around websites on their own reading html text and navigating pages to pull useful information. I&rsquo;m really excited about this project because I actually had a plan for a website built around a web scrapper fetching university academic calendars and then aggregating then in one site. Be on the look out for springbreak.io, its gunna be big.</p>
+
+<blockquote><p>springbreak.io, its gunna be big</p></blockquote>
+
+<p>So thats the week. We also learned about the internet on Wednesday. I am going to try and write a full post about the internet (its a big deal) tomorrow to explain it to all my faithful we&#8217;blog&#8217; followers and to wrap my own head around it.</p>
+
+<p>Cheers,
+Kyle</p>
+
+<p>P.S. I found out sublimetext2 has a spell check, all spelling mistakes are no longer forgivable.</p>
+
+  
+  
+
+
+
+    </article>
+  
+  
+    <article class="post">
+      <div class="sharing-box">
+  
+  
+  
+  <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+      
+  <header>
+    
+      <h2 class="entry-title">
+        
+        <a href="/blog/2013/09/27/the-wild-west-a-dot-k-a-week-2/">the wild west a.k.a &#8216;week 2&#8217;</a>
+        
+      </h2>
+    
+    <span class="min-read"></span>
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-09-27T10:17:00-04:00" pubdate data-updated="true">Sep 27<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  
+
+<figure class='code'><figcaption><span>metaprograming - .send.rb </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="nb">puts</span> <span class="s2">&quot;something meta this way comes&quot;</span> <span class="k">unless</span> <span class="n">hardcoded</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Week 2!
+It might be easier to keep track of weeks than days. So lets say week 2(4) and leave it at that. Topics I want to talk about paired programming and meta programming.</p>
+
+<p>Paired programming is popular programming style (maybe those arn&rsquo;t the right words) where two programmers work together on the same project using 1 computer. In paired programming 1 programmer writes tests they expect the program to pass and then the other programmer takes over an writes code to pass the test. This approach is called ping-pong or red-green programming. Programmers pass the keyboard back and forth, which is where the ping pong comes from. After the first programmer writes the test, all the tests are run and b/c the functionality in the program has not been written yet, the tests fail. Failed tests show up as red in the command prompt (*you have to set the tests to show colors). Then the second programmer writes the code to have the tests pass. Once the code is written the tests are run again and if the program has been written correctly, (sort of an arbitrary idea) the tests will pass. The functionality can then be changed, or &lsquo;refactored&rsquo;, to clean it up or just write it better. Having tests written out is really nice bevause it means that if your code changes you will always know if changing one small thing will effect anything else in your code. The ping-pong/red-green process continues until they have competed the project (or atleas thats what I think, but we&rsquo;ve only been doing 1-2 day projects).</p>
+
+<p>The downsides of paired programming are obvious. A company could be paying two programmers to do the work of one and the better programmer can dominate the project while the other sits back and doesn&rsquo;t contribute. But the pros far outweigh the cons. My favorite benefit is that it forces eah person to vocalize what they are thinking. ften times I will have an inkling of what I should be doing and then dive into the project without fully fleshing out my idea. In paired programming you normally explain what you think you are about to write to the person you are working with before you write it. If my idea is only partly formed or has some falicy, it becomes obvious while I am speaking. Additioanlly, if I understand a concept, or rather think I understand a concept and my partner does not, I get to explain it to them and along the way learn a little bit more about the concept because I am trying to clearly explain it to someone else. The fli[p side of this is if I don;t understand something I have someone sitting next to me who is willing and able to explain things to me. Other things I benifit from are having a second person around to watch for syntax, typos and gramatical mistakes. Another important benefit which someone mentoned today is that diring paired programing, you can&rsquo;t really goof off. And to be honest, you don&rsquo;t feel the need to goof off nearly as much. Rather than just staring at a screen and feeling the constant need to check if ESPN posted another article about the NHL, I feel fully engaged in the problem I am sovling.</p>
+
+<p>Overall, I feel like I have been the more experienced programmer in the 3 pairs I have been in. Even so, I don&rsquo;t think I would have completed the project much faster if at all, had I been working by myself. My partner has saved me from entering a fruitless rabbit hole many times. Also becasue someone is watching me type my code, I think I write much cleaner code. I used better variable names, space things out better and am more willing to write helper functions.</p>
+
+<p>I&rsquo;m pretty sure where I used to work, does not use pair programming at all. I think they do do some type of testing (well ya, obviously they test things kyle) but not exactly the types of things we did here. I know the phrase &lsquo;acceptance criteria&rsquo; was passed around which seems similar to what we are doing in red-green testing, but I don&rsquo;t think use it as liberally as we did in our work.</p>
+
+<p>Ok so thats paired programming.</p>
+
+<p>meta programming:
+is probably not the right phrase. but i like it. (also im going to stop capitalizing everything) . meta programming is basically programming code to write more code. it is understanding that whatever code you need may not exist yet but based on a few inputs, we know what functions we might want to create. some people find this very confusing but i love it. for me its just recognizing patterns. i think day-to-day it probably isnt used too often but the few times you need it, it can be super powerful. to me powerful means it can handle many different cases and hopefully cases you dont even conceptualize when you write the code.</p>
+
+<p>im sort of we&#8217;blog&#8217;ed out for now.</p>
+
+<p>oh one other thing I worked on this week was linking to the facebook api. that was fun. hard because my javascript skills are subpar but its comeing alont. i am trying to create a simple site where people can sign up with facebook. more to come</p>
+
+<p>Cheers,
+Kyle</p>
+
+<p>P.S. Please forgive any grammatical or spelling mistakes</p>
+
+  
+  
+
+
+
+    </article>
   
   
     <article class="post">

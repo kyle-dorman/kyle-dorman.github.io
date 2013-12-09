@@ -4,7 +4,7 @@
   <title><![CDATA[a 'we'blog]]></title>
   <link href="http://kyle-dorman.github.io/atom.xml" rel="self"/>
   <link href="http://kyle-dorman.github.io/"/>
-  <updated>2013-12-09T12:47:01-05:00</updated>
+  <updated>2013-12-09T17:57:44-05:00</updated>
   <id>http://kyle-dorman.github.io/</id>
   <author>
     <name><![CDATA[Kyle Dorman]]></name>
@@ -12,6 +12,38 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[SeeBTC Video]]></title>
+    <link href="http://kyle-dorman.github.io/blog/2013/12/09/seebtc-video/"/>
+    <updated>2013-12-09T17:42:00-05:00</updated>
+    <id>http://kyle-dorman.github.io/blog/2013/12/09/seebtc-video</id>
+    <content type="html"><![CDATA[<p>Here is a look at my second hackathon project, seebtc. Jorge, Jullian and I ended up winning a prize from one of the API sponsors, ChartIQ. The ChartIQ guy was impressed with how deep we got into the ChartIQ code to enable live streaming of our own data. We are using a Node.js server with an Express framework. We are using web sockets and socket.io to connect to two APIs, MtGox and Blockchain. From MtGox we was recieving every bitcoin trade from thier site, and from Blockchain we are recieving every bitcoin transaction that takes place from thier site. We are saving the trade data to a MongoDB database using the Mongoose ORM and creating candlestick bars every minute with the trade data. We only have 1 view, a dashboard showing the ChartIQ graph with updates every minute, tweets about bitcoins using StockTwits, and a map of the world showing where people are spending bitcoins. Most of this is covered in the video. If you have any questions, feel free to reach out.</p>
+
+<iframe width="560" height="315" src="www.youtube.com/watch?v=jgETmUi6oTQ" frameborder="0" allowfullscreen></iframe>
+
+
+<p>Cheers,
+Kyle</p>
+
+<p>P.S. We currently have this up on cbtc.herokuapp.com but will be running out of space in our MongoDB database soon and will either have to clear the database or take the site down.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Formation Video]]></title>
+    <link href="http://kyle-dorman.github.io/blog/2013/12/09/formation-video/"/>
+    <updated>2013-12-09T17:41:00-05:00</updated>
+    <id>http://kyle-dorman.github.io/blog/2013/12/09/formation-video</id>
+    <content type="html"><![CDATA[<p>Here is a look at my Mobile Payments Hackathon project from back in October, which I call Formation. Jorge, Julian and I built a rails app which uses NokoGiri to web-scrape a google form and append a Stripe payment. The idea is to allow people to add payments to thier Google Forms. Most of this is convered in the video. If you have any questions feel free to reach out.</p>
+
+<iframe width="560" height="315" src="www.youtube.com/watch?v=l3z69sM9B_Y" frameborder="0" allowfullscreen></iframe>
+
+
+<p>Cheers,
+Kyle</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[ChitChat.js]]></title>
